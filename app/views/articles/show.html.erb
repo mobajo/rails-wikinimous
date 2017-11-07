@@ -1,0 +1,4 @@
+<p><%= link_to 'Back to main page', articles_path %></p>
+<h1><%= @article.title %> | <%= link_to 'Edit', edit_article_path %> | <%= link_to "Delete", article_path(@article), method: 'delete' %></h1>
+<p>Posted: <%= @article.created_at %></p>
+<%= kramdown @article.content %>

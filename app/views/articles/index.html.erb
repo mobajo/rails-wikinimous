@@ -1,0 +1,11 @@
+<h1>Articles</h1>
+<p><%= link_to 'Create a new article', new_article_path %>
+  <% @articles.each do |article| %>
+  <div>
+    <%= link_to article_path(article) do %>
+    <h2><%= article.title %></h2>
+    <% end %>
+    <%= kramdown article.content %>
+    <hr />
+  </div>
+  <% end %>
